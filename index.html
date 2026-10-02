@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Archimadeira | Móveis & Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="topbar">Frete grátis para todo o Brasil em compras acima de R$ 1.999 • Parcelamento em até 10x sem juros</div>
+
+<header class="header">
+  <div class="container header-main">
+    <div class="logo">
+      <span class="ico ico-logo"></span>
+      <div>
+        <strong>ARCHIMADEIRA</strong>
+        <small>Móveis & Design</small>
+      </div>
+    </div>
+    
+    <div class="search">
+      <span class="ico ico-search"></span>
+      <input type="text" id="searchInput" placeholder="Buscar produtos por nome, categoria ou acabamento...">
+      <button class="btn-dark" data-action="Buscar">Buscar</button>
+    </div>
+    <div class="header-actions">
+      <button class="action-box" data-action="Minha Conta">
+        <span class="ico ico-user"></span>
+        <span><small>Olá, Visitante</small><b>Minha Conta</b></span>
+      </button>
+      <button class="icon-btn" data-action="Favoritos" aria-label="Favoritos"><span class="ico ico-heart"></span></button>
+      <button class="action-box cart" data-action="Carrinho">
+        <span class="ico ico-cart"></span>
+        <span><small>Carrinho</small><b>R$ 13.115,70</b></span>
+      </button>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <div class="container nav-inner">
+      <ul>
+        <li><button class="nav-all" data-action="Todos os Produtos"><span class="ico ico-menu"></span> Todos os Produtos</button></li>
+        <li><button data-action="Sofás">Sofás</button></li>
+        <li><button data-action="Salas">Salas</button></li>
+        <li><button data-action="Cozinha e Jantar">Cozinha e Jantar</button></li>
+        <li><button data-action="Quartos">Quartos</button></li>
+        <li><button data-action="Banheiro">Banheiro</button></li>
+        <li><button data-action="Escritório">Escritório</button></li>
+        <li><button data-action="Lançamentos">Lançamentos</button></li>
+        <li><button class="hot" data-action="Mais Vendidos"><span class="ico ico-star"></span> Mais Vendidos</button></li>
+      </ul>
+      <span class="phone"><span class="ico ico-phone"></span> Televendas: 0800 700 2025</span>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div class="hero-text">
+      <span class="tag">Coleção exclusiva 2025</span>
+      <h1>MÓVEIS DE QUALIDADE A UM CLIQUE DE VOCÊ</h1>
+      <p>Design autoral, madeira maciça certificada e acabamento premium para transformar a atmosfera do seu lar com conforto inigualável.</p>
+      <div class="hero-cta">
+        <button class="btn-white" data-action="Confira">CONFIRA &rarr;</button>
+        <small>Descontos de até 40% OFF</small>
+      </div>
+    </div>
+    <div class="hero-image"></div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2>Navegue por Ambientes</h2>
+        <p>Soluções completas com ergonomia e marcenaria refinada</p>
+      </div>
+      <button class="link-btn" data-action="Ver catálogo completo">Ver catálogo completo &rsaquo;</button>
+    </div>
+    <div class="rooms">
+      <button class="room" data-action="Salas & Sofás">
+        <div class="room-img room-1"></div>
+        <strong>Salas & Sofás</strong>
+        <small>Mais de 140 modelos</small>
+      </button>
+      <button class="room" data-action="Quartos & Camas">
+        <div class="room-img room-2"></div>
+        <strong>Quartos & Camas</strong>
+        <small>Camas box e maciças</small>
+      </button>
+      <button class="room" data-action="Cozinha & Jantar">
+        <div class="room-img room-3"></div>
+        <strong>Cozinha & Jantar</strong>
+        <small>Mesas, cadeiras e aparadores</small>
+      </button>
+      <button class="room" data-action="Escritório">
+        <div class="room-img room-4"></div>
+        <strong>Escritório</strong>
+        <small>Mesas e estantes de trabalho</small>
+      </button>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2>Listagem de Produtos</h2>
+        <p>Confira os itens mais procurados e com entrega rápida</p>
+      </div>
+      <label class="sort">
+        Ordenar por:
+        <select id="sortSelect">
+          <option value="popular">Mais Populares</option>
+          <option value="menor">Menor Preço</option>
+          <option value="maior">Maior Preço</option>
+        </select>
+      </label>
+    </div>
+    <div class="products" id="products"></div>
+    <div class="load-more">
+      <button class="btn-outline" id="loadMore">Carregar Mais Produtos &#8635;</button>
+    </div>
+  </section>
+
+  <section class="benefits">
+    <div class="benefit">
+      <span class="b-icon"><span class="ico ico-leaf"></span></span>
+      <div><strong>Madeira 100% Certificada</strong><p>Manejo sustentável com selo de origem garantida e respeito ambiental.</p></div>
+    </div>
+    <div class="benefit">
+      <span class="b-icon"><span class="ico ico-truck"></span></span>
+      <div><strong>Entrega Garantida</strong><p>Frota própria e transportadoras parceiras com montagem especializada.</p></div>
+    </div>
+    <div class="benefit">
+      <span class="b-icon"><span class="ico ico-card"></span></span>
+      <div><strong>Até 10x Sem Juros</strong><p>Parcele suas compras no cartão de crédito ou garanta 5% no PIX.</p></div>
+    </div>
+    <div class="benefit">
+      <span class="b-icon"><span class="ico ico-shield"></span></span>
+      <div><strong>Compra 100% Segura</strong><p>Criptografia SSL de ponta a ponta e garantia de 1 ano em estrutura.</p></div>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <div>
+      <small class="club">CLUBE DE VANTAGENS</small>
+      <h3>Receba projetos, tendências e descontos exclusivos</h3>
+      <p>Assine nossa newsletter semanal feita especialmente para arquitetos e apaixonados por design.</p>
+    </div>
+    <form id="newsletterForm">
+      <input type="email" id="newsletterEmail" placeholder="Seu melhor e-mail..." required>
+      <button type="submit" class="btn-rust">Cadastrar</button>
+    </form>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>&copy; 2025 Archimadeira Móveis & Design. Todos os direitos reservados.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
